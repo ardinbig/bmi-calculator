@@ -1,11 +1,11 @@
 name: bmi_calculator
-description: AN application to calculate BMI
+description: An application to calculate BMI
 
 publish_to: 'none'
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.7.0 <3.0.0"
+  sdk: ">=2.12.0 <3.0.0"
 
 dependencies:
   flutter:
@@ -16,6 +16,11 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
+  flutter_driver:
+    sdk: flutter              
+
+  test: any
 
 flutter:
 

@@ -75,7 +75,7 @@ class _InputScreenState extends State<InputScreen> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(
+                  const Text(
                     'HEIGHT',
                     style: kLabelTextStyle,
                   ),
@@ -87,7 +87,7 @@ class _InputScreenState extends State<InputScreen> {
                         _height.toString(),
                         style: kNumberTextStyle,
                       ),
-                      Text(
+                      const Text(
                         'cm',
                         style: kLabelTextStyle,
                       ),
@@ -116,7 +116,7 @@ class _InputScreenState extends State<InputScreen> {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text(
+                        const Text(
                           'WEIGHT',
                           style: kLabelTextStyle,
                         ),
@@ -135,7 +135,7 @@ class _InputScreenState extends State<InputScreen> {
                                 });
                               },
                             ),
-                            SizedBox(width: 10.0),
+                            const SizedBox(width: 10.0),
                             RoundIconButton(
                               icon: FontAwesomeIcons.plus,
                               onPressed: () {
@@ -156,7 +156,7 @@ class _InputScreenState extends State<InputScreen> {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text(
+                        const Text(
                           'AGE',
                           style: kLabelTextStyle,
                         ),

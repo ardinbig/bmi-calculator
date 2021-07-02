@@ -4,9 +4,9 @@ import '../constants.dart';
 
 class BottomButton extends StatelessWidget {
   const BottomButton({
-    Key key,
-    @required this.onTap,
-    @required this.buttonTitle,
+    Key? key,
+    required this.onTap,
+    required this.buttonTitle,
   }) : super(key: key);
 
   final Function onTap;

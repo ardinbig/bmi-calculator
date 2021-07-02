@@ -6,20 +6,20 @@ import '../constants.dart';
 
 class ResultScreen extends StatelessWidget {
   const ResultScreen({
-    @required this.bmiResult,
-    @required this.resultText,
-    @required this.interpretation,
+    required this.bmiResult,
+    required this.resultText,
+    required this.interpretation,
   });
 
-  final String bmiResult;
-  final String resultText;
-  final String interpretation;
+  final String? bmiResult;
+  final String? resultText;
+  final String? interpretation;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('BMI CALCULATOR'),
+        title: const Text('BMI CALCULATOR'),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -29,7 +29,7 @@ class ResultScreen extends StatelessWidget {
             child: Container(
               padding: const EdgeInsets.all(14.0),
               alignment: Alignment.bottomLeft,
-              child: Text(
+              child: const Text(
                 'Your Result',
                 style: kTitleTextStyle,
               ),
