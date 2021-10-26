@@ -1,11 +1,9 @@
-import 'package:bmi_calculator/components/bottom_button.dart';
-import 'package:bmi_calculator/components/reusable_card.dart';
 import 'package:flutter/material.dart';
+
+import 'package:bmi_calculator/components/components.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../calculator_brain.dart';
-import '../components/icon_content.dart';
-import '../components/round_icon_button.dart';
 import '../constants.dart';
 import 'result_screen.dart';
 
@@ -17,7 +15,8 @@ class InputScreen extends StatefulWidget {
 }
 
 class _InputScreenState extends State<InputScreen> {
-  Gender _selectedGender;
+  Gender? _selectedGender;
+
   int _height = 180;
   int _weight = 60;
   int _age = 19;
@@ -80,6 +79,7 @@ class _InputScreenState extends State<InputScreen> {
                     style: kLabelTextStyle,
                   ),
                   Row(
+                    textBaseline: TextBaseline.alphabetic,
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.baseline,
                     children: [

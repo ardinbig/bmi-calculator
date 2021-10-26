@@ -3,11 +3,8 @@ import 'package:flutter/material.dart';
 import '../constants.dart';
 
 class IconContent extends StatelessWidget {
-  const IconContent({
-    Key? key,
-    required this.label,
-    required this.icon,
-  }) : super(key: key);
+  const IconContent({Key? key, required this.label, required this.icon})
+      : super(key: key);
 
   final String? label;
   final IconData? icon;
@@ -17,7 +14,7 @@ class IconContent extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        const Icon(
+        Icon(
           icon!,
           size: 60.0,
         ),

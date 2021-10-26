@@ -1,7 +1,7 @@
 import 'package:bmi_calculator/components/bottom_button.dart';
+import 'package:bmi_calculator/components/reusable_card.dart';
 import 'package:flutter/material.dart';
 
-import '../components/reusable_card.dart';
 import '../constants.dart';
 
 class ResultScreen extends StatelessWidget {
@@ -44,15 +44,15 @@ class ResultScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Text(
-                    resultText.toUpperCase(),
+                    resultText!.toUpperCase(),
                     style: kResultTextStyle,
                   ),
                   Text(
-                    bmiResult,
+                    bmiResult!,
                     style: kBMITextStyle,
                   ),
                   Text(
-                    interpretation,
+                    interpretation!,
                     style: kBodyTextStyle,
                     textAlign: TextAlign.center,
                   ),
