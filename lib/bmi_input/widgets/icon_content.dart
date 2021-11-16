@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 
-import '../constants.dart';
+import 'package:bmi_calculator/utils/constants.dart';
 
 class IconContent extends StatelessWidget {
-  const IconContent({Key? key, required this.label, required this.icon})
-      : super(key: key);
+  const IconContent({
+    Key? key,
+    required this.label,
+    required this.icon,
+  }) : super(key: key);
 
   final String? label;
   final IconData? icon;

@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 
-import 'package:bmi_calculator/components/components.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:bmi_calculator/bmi_result/view/result_page.dart';
+import 'package:bmi_calculator/bmi_input/widgets/widgets.dart';
+import 'package:bmi_calculator/common/common.dart';
+import 'package:bmi_calculator/utils/utils.dart';
 
-import '../calculator_brain.dart';
-import '../constants.dart';
-import 'result_screen.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 enum Gender { Male, Female }
 
-class InputScreen extends StatefulWidget {
+class InputPage extends StatefulWidget {
   @override
-  _InputScreenState createState() => _InputScreenState();
+  _InputPageState createState() => _InputPageState();
 }
 
-class _InputScreenState extends State<InputScreen> {
+class _InputPageState extends State<InputPage> {
   Gender? _selectedGender;
 
   int _height = 180;
@@ -175,7 +175,7 @@ class _InputScreenState extends State<InputScreen> {
                                 });
                               },
                             ),
-                            SizedBox(width: 10.0),
+                            const SizedBox(width: 10.0),
                             RoundIconButton(
                               icon: FontAwesomeIcons.plus,
                               onPressed: () {
@@ -205,7 +205,7 @@ class _InputScreenState extends State<InputScreen> {
                 context,
                 MaterialPageRoute(
                   builder: (context) {
-                    return ResultScreen(
+                    return ResultPage(
                       bmiResult: calc.calculateBMI(),
                       resultText: calc.getResult(),
                       interpretation: calc.getInterpretation(),

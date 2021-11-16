@@ -1,29 +1,29 @@
 import 'package:flutter/material.dart';
 
-import 'constants.dart';
-import 'screens/input_screen.dart';
+import 'package:bmi_calculator/bmi_input/view/input_page.dart';
+import 'package:bmi_calculator/utils/utils.dart';
 
 class BMICalculator extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      home: InputPage(),
       theme: ThemeData.dark().copyWith(
-        primaryColor: Color(0xFF0A0D22),
-        scaffoldBackgroundColor: Color(0xFF0A0D22),
+        primaryColor: const Color(0xFF0A0D22),
+        scaffoldBackgroundColor: const Color(0xFF0A0D22),
         sliderTheme: SliderTheme.of(context).copyWith(
           activeTrackColor: Colors.white,
           inactiveTrackColor: kGreyColor,
-          overlayColor: Color(0x29EB1555),
+          overlayColor: const Color(0x29EB1555),
           thumbColor: kBottomContainerColor,
-          thumbShape: RoundSliderThumbShape(
+          thumbShape: const RoundSliderThumbShape(
             enabledThumbRadius: 15.0,
           ),
-          overlayShape: RoundSliderOverlayShape(
+          overlayShape: const RoundSliderOverlayShape(
             overlayRadius: 24.0,
           ),
         ),
       ),
-      home: InputScreen(),
     );
   }
 }
