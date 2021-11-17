@@ -21,7 +21,7 @@ class BottomButton extends StatelessWidget {
           top: 10.0,
         ),
         padding: const EdgeInsets.only(
-          bottom: 15.0,
+          bottom: 8.0,
         ),
         width: double.infinity,
         height: kBottomContainerHeight,

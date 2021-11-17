@@ -1,10 +1,8 @@
-import 'package:flutter/material.dart';
-
-import 'package:bmi_calculator/bmi_result/view/result_page.dart';
 import 'package:bmi_calculator/bmi_input/widgets/widgets.dart';
+import 'package:bmi_calculator/bmi_result/view/result_page.dart';
 import 'package:bmi_calculator/common/common.dart';
 import 'package:bmi_calculator/utils/utils.dart';
-
+import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 enum Gender { Male, Female }
