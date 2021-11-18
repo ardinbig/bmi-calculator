@@ -1,7 +1,6 @@
-import 'package:flutter/material.dart';
-
 import 'package:bmi_calculator/bmi_input/view/input_page.dart';
-import 'package:bmi_calculator/utils/utils.dart';
+import 'package:bmi_calculator/utils/constants.dart';
+import 'package:flutter/material.dart';
 
 class BMICalculator extends StatelessWidget {
   @override

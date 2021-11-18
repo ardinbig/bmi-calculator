@@ -33,6 +33,7 @@ class _InputPageState extends State<InputPage> {
               children: [
                 Expanded(
                   child: ReusableCard(
+                    key: const Key("inputPage_reusableCard_male"),
                     onTap: () {
                       setState(() {
                         _selectedGender = Gender.Male;
@@ -49,6 +50,7 @@ class _InputPageState extends State<InputPage> {
                 ),
                 Expanded(
                   child: ReusableCard(
+                    key: const Key("inputPage_reusableCard_female"),
                     onTap: () {
                       setState(() {
                         _selectedGender = Gender.Female;
@@ -86,7 +88,7 @@ class _InputPageState extends State<InputPage> {
                         style: kNumberTextStyle,
                       ),
                       const Text(
-                        'cm',
+                        ' cm',
                         style: kLabelTextStyle,
                       ),
                     ],
@@ -126,6 +128,8 @@ class _InputPageState extends State<InputPage> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             RoundIconButton(
+                              key: const Key(
+                                  "inputPage_iconButton_weight_minus"),
                               icon: FontAwesomeIcons.minus,
                               onPressed: () {
                                 setState(() {
@@ -135,6 +139,8 @@ class _InputPageState extends State<InputPage> {
                             ),
                             const SizedBox(width: 10.0),
                             RoundIconButton(
+                              key:
+                                  const Key("inputPage_iconButton_weight_plus"),
                               icon: FontAwesomeIcons.plus,
                               onPressed: () {
                                 setState(() {
@@ -166,6 +172,7 @@ class _InputPageState extends State<InputPage> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             RoundIconButton(
+                              key: const Key("inputPage_iconButton_age_minus"),
                               icon: FontAwesomeIcons.minus,
                               onPressed: () {
                                 setState(() {
@@ -175,6 +182,7 @@ class _InputPageState extends State<InputPage> {
                             ),
                             const SizedBox(width: 10.0),
                             RoundIconButton(
+                              key: const Key("inputPage_iconButton_age_plus"),
                               icon: FontAwesomeIcons.plus,
                               onPressed: () {
                                 setState(() {
@@ -192,6 +200,7 @@ class _InputPageState extends State<InputPage> {
             ),
           ),
           BottomButton(
+            key: const Key("inputPage_bottomButtom"),
             buttonTitle: 'CALCULATE',
             onTap: () {
               CalculatorBrain calc = CalculatorBrain(

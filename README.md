@@ -1,6 +1,6 @@
 # bmi_calculator
 
-AN application to calculate BMI
+An application to calculate BMI
 
 ## Getting Started
 
