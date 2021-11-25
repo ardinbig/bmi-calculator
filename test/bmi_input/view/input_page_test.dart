@@ -5,83 +5,89 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
-  group("Input page", () {
-    testWidgets("renders five widgets ot type ReusableCard", (tester) async {
-      await tester.pumpWidget(BMICalculator());
+  group('Input page', () {
+    testWidgets('renders five widgets of type ReusableCard', (tester) async {
+      await tester.pumpWidget(const BMICalculator());
       expect(find.byType(ReusableCard), findsNWidgets(5));
     });
 
-    testWidgets("renders one widget ot type BottomButton", (tester) async {
-      await tester.pumpWidget(BMICalculator());
-      expect(find.byType(BottomButton), findsNWidgets(1));
+    testWidgets('renders one widget of type BottomButton', (tester) async {
+      await tester.pumpWidget(const BMICalculator());
+      expect(find.byType(BottomButton), findsOneWidget);
     });
   });
 
-  group("Click on ReusableCard", () {
-    const maleKey = const Key("inputPage_reusableCard_male");
-    const femaleKey = const Key("inputPage_reusableCard_female");
+  group('Click on ReusableCard', () {
+    const maleKey = Key('inputPage_reusableCard_male');
+    const femaleKey = Key('inputPage_reusableCard_female');
+    // const maleKeyIcon = Key('inputPage_iconContent_male');
+    // const femaleKeyIcon = Key('inputPage_iconContent_female');
 
-    testWidgets("renders male selection", (tester) async {
-      await tester.pumpWidget(BMICalculator());
+    testWidgets('renders male selection', (tester) async {
+      await tester.pumpWidget(const BMICalculator());
       await tester.tap(find.byKey(maleKey));
       await tester.pumpAndSettle();
+      // final male = tester.widget(find.byKey(maleKeyIcon)) as IconContent;
       final widget = tester.widget(find.byKey(maleKey)) as ReusableCard;
       expect(widget.color, kActiveCardColor);
+      // expect(male.label, 'MALE');
     });
 
-    testWidgets("renders female selection", (tester) async {
-      await tester.pumpWidget(BMICalculator());
+    testWidgets('renders female selection', (tester) async {
+      await tester.pumpWidget(const BMICalculator());
       await tester.tap(find.byKey(femaleKey));
       await tester.pumpAndSettle();
+      // final female = tester.widget(find.byKey(femaleKeyIcon)) as IconContent;
       final widget = tester.widget(find.byKey(femaleKey)) as ReusableCard;
       expect(widget.color, kActiveCardColor);
+      // expect(female.label, 'FEMALE');
     });
   });
 
-  group("Sliver", () {
-    testWidgets("renders default value", (tester) async {
+  group('Sliver', () {
+    testWidgets('renders default value', (tester) async {
       final slider = find.byType(Slider);
-      await tester.pumpWidget(BMICalculator());
-      await tester.drag(slider, Offset(0.5, 0.0));
-      expect(find.text("60"), findsOneWidget);
+      await tester.pumpWidget(const BMICalculator());
+      await tester.drag(slider, const Offset(0.5, 0));
+      expect(find.text('60'), findsOneWidget);
     });
   });
 
-  group("Weight ReusableCard", () {
-    const minusKey = const Key("inputPage_iconButton_weight_minus");
-    const plusKey = const Key("inputPage_iconButton_weight_plus");
+  group('Weight ReusableCard', () {
+    const minusKey = Key('inputPage_iconButton_weight_minus');
+    const plusKey = Key('inputPage_iconButton_weight_plus');
 
-    testWidgets("renders default - 1, expect 59 ", (tester) async {
-      await tester.pumpWidget(BMICalculator());
+    testWidgets('renders default - 1, expect 59 ', (tester) async {
+      await tester.pumpWidget(const BMICalculator());
       await tester.tap(find.byKey(minusKey));
       await tester.pumpAndSettle();
-      expect(find.text("59"), findsOneWidget);
+      expect(find.text('59'), findsOneWidget);
     });
 
-    testWidgets("renders default + 1, expect 61 ", (tester) async {
-      await tester.pumpWidget(BMICalculator());
+    testWidgets('renders default + 1, expect 61 ', (tester) async {
+      await tester.pumpWidget(const BMICalculator());
       await tester.tap(find.byKey(plusKey));
       await tester.pumpAndSettle();
-      expect(find.text("61"), findsOneWidget);
+      expect(find.text('61'), findsOneWidget);
     });
   });
 
-  group("Age ReusableCard", () {
-    const minusKey = const Key("inputPage_iconButton_age_minus");
-    const plusKey = const Key("inputPage_iconButton_age_plus");
+  group('Age ReusableCard', () {
+    const minusKey = Key('inputPage_iconButton_age_minus');
+    const plusKey = Key('inputPage_iconButton_age_plus');
 
-    testWidgets("renders default - 1, expect 18 ", (tester) async {
-      await tester.pumpWidget(BMICalculator());
+    testWidgets('renders default - 1, expect 18 ', (tester) async {
+      await tester.pumpWidget(const BMICalculator());
       await tester.tap(find.byKey(minusKey));
       await tester.pumpAndSettle();
-      expect(find.text("18"), findsOneWidget);
+      expect(find.text('18'), findsOneWidget);
     });
 
-    testWidgets("renders default + 1, expect 20 ", (tester) async {
-      await tester.pumpWidget(BMICalculator());
+    testWidgets('renders default + 1, expect 20 ', (tester) async {
+      await tester.pumpWidget(const BMICalculator());
       await tester.tap(find.byKey(plusKey));
       await tester.pumpAndSettle();
-      expect(find.text("20"), findsOneWidget);
+      expect(find.text('20'), findsOneWidget);
     });
   });
 }

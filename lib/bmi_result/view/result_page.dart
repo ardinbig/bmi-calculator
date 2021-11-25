@@ -4,10 +4,11 @@ import 'package:flutter/material.dart';
 
 class ResultPage extends StatelessWidget {
   const ResultPage({
+    Key? key,
     required this.bmiResult,
     required this.resultText,
     required this.interpretation,
-  });
+  }) : super(key: key);
 
   final String? bmiResult;
   final String? resultText;
@@ -25,7 +26,7 @@ class ResultPage extends StatelessWidget {
         children: [
           Expanded(
             child: Container(
-              padding: const EdgeInsets.all(14.0),
+              padding: const EdgeInsets.all(14),
               alignment: Alignment.bottomLeft,
               child: const Text(
                 'Your Result',
@@ -39,7 +40,6 @@ class ResultPage extends StatelessWidget {
               color: kActiveCardColor,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Text(
                     resultText!.toUpperCase(),
@@ -59,7 +59,7 @@ class ResultPage extends StatelessWidget {
             ),
           ),
           BottomButton(
-            key: const Key("resultPage_bottomButtom"),
+            key: const Key('resultPage_bottomButtom'),
             buttonTitle: 'RE-CALCULATE',
             onTap: () => Navigator.pop(context),
           ),
