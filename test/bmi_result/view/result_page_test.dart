@@ -5,33 +5,33 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
-  group("Result page", () {
-    const resultPageKey = const Key("resultPage_bottomButtom");
-    const inputPageKey = const Key("inputPage_bottomButtom");
+  group('Result page', () {
+    const resultPageKey = Key('resultPage_bottomButtom');
+    const inputPageKey = Key('inputPage_bottomButtom');
 
-    testWidgets("should display your result title", (tester) async {
-      await tester.pumpWidget(BMICalculator());
+    testWidgets('should display your result title', (tester) async {
+      await tester.pumpWidget(const BMICalculator());
       await tester.tap(find.byKey(inputPageKey));
       await tester.pumpAndSettle();
-      expect(find.text("Your Result"), findsOneWidget);
+      expect(find.text('Your Result'), findsOneWidget);
     });
 
-    testWidgets("renders one widget of type ReusableCard", (tester) async {
-      await tester.pumpWidget(BMICalculator());
+    testWidgets('renders one widget of type ReusableCard', (tester) async {
+      await tester.pumpWidget(const BMICalculator());
       await tester.tap(find.byKey(inputPageKey));
       await tester.pumpAndSettle();
       expect(find.byType(ReusableCard), findsOneWidget);
     });
 
-    testWidgets("renders one widget of type BottomButton", (tester) async {
-      await tester.pumpWidget(BMICalculator());
+    testWidgets('renders one widget of type BottomButton', (tester) async {
+      await tester.pumpWidget(const BMICalculator());
       await tester.tap(find.byKey(inputPageKey));
       await tester.pumpAndSettle();
       expect(find.byType(BottomButton), findsOneWidget);
     });
 
-    testWidgets("returns on inputPage", (tester) async {
-      await tester.pumpWidget(BMICalculator());
+    testWidgets('returns on inputPage', (tester) async {
+      await tester.pumpWidget(const BMICalculator());
       await tester.tap(find.byKey(inputPageKey));
       await tester.pumpAndSettle();
       await tester.tap(find.byKey(resultPageKey));

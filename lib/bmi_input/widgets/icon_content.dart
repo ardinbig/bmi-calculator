@@ -17,11 +17,11 @@ class IconContent extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Icon(
-          icon!,
-          size: 60.0,
+          icon,
+          size: 60,
         ),
         const SizedBox(
-          height: 10.0,
+          height: 10,
         ),
         Text(
           label!,
