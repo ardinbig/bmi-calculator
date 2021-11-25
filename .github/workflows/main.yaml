@@ -16,4 +16,5 @@ jobs:
     - name: install dependencies
       run: flutter pub get
     - name: run tests
-      run: flutter test --exclued-tags='no-ci'
+      run: flutter test
+      # run: flutter test --exclued-tags='no-ci'
