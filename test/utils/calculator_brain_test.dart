@@ -11,7 +11,7 @@ void main() {
   });
 
   group("Calculator Brain", () {
-    test("bmi value should start by 18.5", () {
+    test("BMI value should start by 18.5", () {
       expect(calculatorBrain.calculateBMI(), "18.5");
     });
 
