@@ -6,35 +6,41 @@ import 'package:flutter_test/flutter_test.dart';
 
 void main() {
   group('Input page', () {
-    testWidgets('renders five widgets ot type ReusableCard', (tester) async {
+    testWidgets('renders five widgets of type ReusableCard', (tester) async {
       await tester.pumpWidget(const BMICalculator());
       expect(find.byType(ReusableCard), findsNWidgets(5));
     });
 
-    testWidgets('renders one widget ot type BottomButton', (tester) async {
+    testWidgets('renders one widget of type BottomButton', (tester) async {
       await tester.pumpWidget(const BMICalculator());
-      expect(find.byType(BottomButton), findsNWidgets(1));
+      expect(find.byType(BottomButton), findsOneWidget);
     });
   });
 
   group('Click on ReusableCard', () {
     const maleKey = Key('inputPage_reusableCard_male');
     const femaleKey = Key('inputPage_reusableCard_female');
+    // const maleKeyIcon = Key('inputPage_iconContent_male');
+    // const femaleKeyIcon = Key('inputPage_iconContent_female');
 
     testWidgets('renders male selection', (tester) async {
       await tester.pumpWidget(const BMICalculator());
       await tester.tap(find.byKey(maleKey));
       await tester.pumpAndSettle();
+      // final male = tester.widget(find.byKey(maleKeyIcon)) as IconContent;
       final widget = tester.widget(find.byKey(maleKey)) as ReusableCard;
       expect(widget.color, kActiveCardColor);
+      // expect(male.label, 'MALE');
     });
 
     testWidgets('renders female selection', (tester) async {
       await tester.pumpWidget(const BMICalculator());
       await tester.tap(find.byKey(femaleKey));
       await tester.pumpAndSettle();
+      // final female = tester.widget(find.byKey(femaleKeyIcon)) as IconContent;
       final widget = tester.widget(find.byKey(femaleKey)) as ReusableCard;
       expect(widget.color, kActiveCardColor);
+      // expect(female.label, 'FEMALE');
     });
   });
 

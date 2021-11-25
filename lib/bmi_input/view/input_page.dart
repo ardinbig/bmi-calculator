@@ -47,6 +47,7 @@ class _InputPageState extends State<InputPage> {
                         ? kActiveCardColor
                         : kInactiveCardColor,
                     child: const IconContent(
+                      // key: Key('inputPage_iconContent_male'),
                       icon: FontAwesomeIcons.mars,
                       label: 'MALE',
                     ),
@@ -64,6 +65,7 @@ class _InputPageState extends State<InputPage> {
                         ? kActiveCardColor
                         : kInactiveCardColor,
                     child: const IconContent(
+                      // key: Key('inputPage_iconContent_female'),
                       icon: FontAwesomeIcons.venus,
                       label: 'FEMALE',
                     ),
