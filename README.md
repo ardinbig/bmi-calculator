@@ -8,8 +8,10 @@ An application to calculate BMI
 
 ## Screens
 
-![Input page][input_page]
-![Result page][result_page]
+<div align="left">
+    <img src="https://github.com/ardinbig/bmi-calculator/blob/main/screenshots/input_page.png" width="250">
+    <img src="https://github.com/ardinbig/bmi-calculator/blob/main/screenshots/result_page.png" width="250">
+</div>
 
 [build_status_badge]: https://github.com/ardinbig/bmi-calculator/actions/workflows/main.yaml/badge.svg
 [workflow_link]: https://github.com/ardinbig/bmi-calculator/actions/workflows/main.yaml
