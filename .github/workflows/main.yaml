@@ -23,7 +23,7 @@ jobs:
       run: flutter format --set-exit-if-changed lib test
 
     - name: Run tests
-      run: flutter test --no-pub --coverage --test-randomize-ordering-seed random --exclued-tags='no-ci'
+      run: flutter test --no-pub --coverage --test-randomize-ordering-seed random --exclude-tags='no-ci'
 
     - name: Very Good Coverage
       uses: VeryGoodOpenSource/very_good_coverage@v1.2.0
