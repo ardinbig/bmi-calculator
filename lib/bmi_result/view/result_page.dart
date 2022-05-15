@@ -4,11 +4,11 @@ import 'package:flutter/material.dart';
 
 class ResultPage extends StatelessWidget {
   const ResultPage({
-    Key? key,
+    super.key,
     required this.bmiResult,
     required this.resultText,
     required this.interpretation,
-  }) : super(key: key);
+  });
 
   final String? bmiResult;
   final String? resultText;
@@ -59,7 +59,7 @@ class ResultPage extends StatelessWidget {
             ),
           ),
           BottomButton(
-            key: const Key('resultPage_bottomButtom'),
+            key: const Key('resultPage_bottomButton'),
             buttonTitle: 'RE-CALCULATE',
             onTap: () => Navigator.pop(context),
           ),

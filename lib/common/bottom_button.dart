@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 
 class BottomButton extends StatelessWidget {
   const BottomButton({
-    Key? key,
+    super.key,
     required this.onTap,
     required this.buttonTitle,
-  }) : super(key: key);
+  });
 
   final Function()? onTap;
   final String buttonTitle;

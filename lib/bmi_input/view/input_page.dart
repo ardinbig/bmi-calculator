@@ -10,7 +10,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 enum Gender { male, female }
 
 class InputPage extends StatefulWidget {
-  const InputPage({Key? key}) : super(key: key);
+  const InputPage({super.key});
 
   @override
   _InputPageState createState() => _InputPageState();
@@ -207,7 +207,7 @@ class _InputPageState extends State<InputPage> {
             ),
           ),
           BottomButton(
-            key: const Key('inputPage_bottomButtom'),
+            key: const Key('inputPage_bottomButton'),
             buttonTitle: 'CALCULATE',
             onTap: () {
               final calc = CalculatorBrain(

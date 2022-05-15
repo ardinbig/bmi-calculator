@@ -22,7 +22,7 @@ void main() {
     await driver!.tackScreenshot('input_page');
   });
 
-  test('Calculating BMI with inital value', () async {
+  test('Calculating BMI with initial value', () async {
     await driver!.tap(find.byType('BottomButton'));
     await driver!.waitFor(find.text('NORMAL'));
     await driver!.waitFor(find.text('18.5'));

@@ -6,8 +6,8 @@ import 'package:flutter_test/flutter_test.dart';
 
 void main() {
   group('Result page', () {
-    const resultPageKey = Key('resultPage_bottomButtom');
-    const inputPageKey = Key('inputPage_bottomButtom');
+    const resultPageKey = Key('resultPage_bottomButton');
+    const inputPageKey = Key('inputPage_bottomButton');
 
     testWidgets('should display your result title', (tester) async {
       await tester.pumpWidget(const BMICalculator());

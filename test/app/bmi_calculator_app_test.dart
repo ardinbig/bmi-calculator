@@ -8,7 +8,7 @@ void main() {
       await tester.pumpWidget(const BMICalculator());
       await expectLater(
         find.byType(BMICalculator),
-        matchesGoldenFile('goldens/bmi_calculator_app.png'),
+        matchesGoldenFile('golden/bmi_calculator_app.png'),
       );
     },
     tags: 'no-ci',
