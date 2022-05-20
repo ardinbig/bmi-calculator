@@ -1,7 +1,7 @@
 import 'package:bmi_calculator/main.dart' as bmi_calculator;
-import 'package:flutter_driver/driver_extension.dart';
+import 'package:integration_test/integration_test.dart';
 
 void main() {
-  enableFlutterDriverExtension();
+  IntegrationTestWidgetsFlutterBinding.ensureInitialized();
   bmi_calculator.main();
 }
