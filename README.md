@@ -1,6 +1,6 @@
 # BMI Calculator
 
-An application to calculate BMI
+An application to calculate BMI.
 
 [![bmi_calculator][build_status_badge]][workflow_link]
 [![Codemagic build status][codemagic_status_badge]][codemagic_status_link]

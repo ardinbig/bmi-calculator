@@ -44,6 +44,7 @@ class ResultPage extends StatelessWidget {
                   Text(
                     resultText!.toUpperCase(),
                     style: kResultTextStyle,
+                    key: const Key('resultPage_text'),
                   ),
                   Text(
                     bmiResult!,

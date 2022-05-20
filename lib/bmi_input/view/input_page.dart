@@ -96,6 +96,7 @@ class _InputPageState extends State<InputPage> {
                       const Text(
                         ' cm',
                         style: kLabelTextStyle,
+                        key: Key('inputPage_text_height'),
                       ),
                     ],
                   ),
@@ -125,6 +126,7 @@ class _InputPageState extends State<InputPage> {
                         const Text(
                           'WEIGHT',
                           style: kLabelTextStyle,
+                          key: Key('inputPage_text_weight'),
                         ),
                         Text(
                           _weight.toString(),
@@ -170,6 +172,7 @@ class _InputPageState extends State<InputPage> {
                         const Text(
                           'AGE',
                           style: kLabelTextStyle,
+                          key: Key('inputPage_text_age'),
                         ),
                         Text(
                           _age.toString(),
