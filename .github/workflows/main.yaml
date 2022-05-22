@@ -31,9 +31,9 @@ jobs:
     - name: Upload coverage to codecov
       uses: codecov/codecov-action@v2
       with:
-        files: coverage/lcov.info # optional
-        flags: unittests # optional
-        name: codecov-umbrella # optional
-        fail_ci_if_error: true # optional (default = false)
-        verbose: true # optional (default = false)
+        files: coverage/lcov.info
+        flags: unittests
+        name: codecov-umbrella
+        fail_ci_if_error: true
+        verbose: true
         path_to_write_report: coverage/codecov_report.txt
