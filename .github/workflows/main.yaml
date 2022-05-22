@@ -29,7 +29,7 @@ jobs:
       uses: VeryGoodOpenSource/very_good_coverage@v1.2.1
 
     - name: Upload coverage to codecov
-    - uses: codecov/codecov-action@v2
+      uses: codecov/codecov-action@v2
       with:
         files: ../coverage/lcov.info # optional
         flags: unittests # optional
