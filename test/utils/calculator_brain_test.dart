@@ -5,9 +5,9 @@ void main() {
   late CalculatorBrain calculatorBrain;
 
   setUp(() {
-    const _height = 180;
-    const _weight = 60;
-    calculatorBrain = CalculatorBrain(height: _height, weight: _weight);
+    const height = 180;
+    const weight = 60;
+    calculatorBrain = CalculatorBrain(height: height, weight: weight);
   });
 
   group('Calculator Brain', () {
